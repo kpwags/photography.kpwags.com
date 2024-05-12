@@ -1,0 +1,59 @@
+:root {
+    --background: oklch(100% 0 0);
+    --shaded-background: oklch(96.96% 0 0);
+    --text: oklch(26.97% 0 0);
+    --white-1: oklch(100% 0 0);
+    --white-2: oklch(92.34% 0 0);
+    --black-1: oklch(20.44% 0 0);
+    --black-2: oklch(26.97% 0 0);
+    --black-3: oklch(32.11% 0 0);
+    --grey-1: oklch(75.7% 0 0);
+    --grey-2: oklch(50.13% 0 0);
+    --font: Inconsolata, monospace;
+    --primary-color-1: oklch(57.94% 0.197 252);
+    --primary-color-2: oklch(45% 0.163 252);
+    --primary-color-3: oklch(63.53% 0.168 252);
+    --box-shadow: 0 12px 24px 0 oklch(0% 0 0 / 20%);
+    --meta: oklch(32.11% 0 0);
+    --display-light-mode: inline;
+    --display-dark-mode: none;
+    --width: min(80ch, 100vw - 2rem);
+}
+
+[data-theme*='dark'] {
+    --background: oklch(26.03% 0 0);
+    --shaded-background: oklch(30.12% 0 0);
+    --text: oklch(95.51% 0 0);
+    --primary-color-1: oklch(68.53% 0.16 229.76);
+    --primary-color-2: oklch(75.29% 0.1608 229.76);
+    --primary-color-3: oklch(75.29% 0.1718 229.76);
+    --meta: oklch(91.58% 0 0);
+    --display-light-mode: none;
+    --display-dark-mode: inline;
+    --box-shadow: 0 12px 24px 0 oklch(47.41% 0 0 / 20%);
+}
+
+[data-theme*='light'] {
+    --background: oklch(100% 0 0);
+    --shaded-background: oklch(96.96% 0 0);
+    --text: oklch(26.97% 0 0);
+    --white-1: oklch(100% 0 0);
+    --white-2: oklch(92.34% 0 0);
+    --black-1: oklch(20.44% 0 0);
+    --black-2: oklch(26.97% 0 0);
+    --black-3: oklch(32.11% 0 0);
+    --grey-1: oklch(75.7% 0 0);
+    --grey-2: oklch(50.13% 0 0);
+    --primary-color-1: oklch(57.94% 0.197 252);
+    --primary-color-2: oklch(45% 0.163 252);
+    --primary-color-3: oklch(63.53% 0.168 252);
+    --box-shadow: 0 12px 24px 0 oklch(0% 0 0 / 20%);
+    --meta: oklch(32.11% 0 0);
+    --display-light-mode: inline;
+    --display-dark-mode: none;
+    --primary-color-red: oklch(62.94% 0.276 26.47);
+    --primary-color-orange: oklch(72.94% 0.165 54);
+    --primary-color-green: oklch(48.24% 0.118 149.75);
+    --primary-color-blue: oklch(57.94% 0.197 252);
+    --primary-color-purple: oklch(63.53% 0.266 325.06);
+}
