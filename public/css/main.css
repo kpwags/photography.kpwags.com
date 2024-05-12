@@ -23,6 +23,10 @@ h1 {
     padding: 0;
 }
 
+h1.capitalized {
+    text-transform: uppercase;
+}
+
 h2 {
     font-weight: 400;
     font-size: 2.75rem;
@@ -84,21 +88,19 @@ a img {
 header {
     width: var(--width);
     margin: 16px auto;
+}
 
-    span.title {
-        a {
-            text-transform: uppercase;
-            font-weight: 900;
-            font-size: 2rem;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            color: var(--primary-color-2);
+header span.title a {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 2rem;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    color: var(--primary-color-2);
+}
 
-            &:hover {
-                color: var(--primary-color-1);
-            }
-        }
-    }
+header span.title a:hover {
+    color: var(--primary-color-1);
 }
 
 /* FOOTER */
@@ -107,46 +109,84 @@ footer {
     margin: 16px auto;
     padding-top: 32px;
     border-top: 1px solid var(--primary-color-3);
+}
 
-    nav {
-        display: block;
-        margin-bottom: 24px;
-        text-align: center;
+footer nav {
+    display: flex;
+    margin-bottom: 24px;
+    justify-content: center;
+    column-gap: 32px;
+    align-items: center;
+}
 
-        ul {
-            margin: 0;
-            padding: 0;
+footer nav ul {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
 
-            li {
-                list-style-type: '';
-                display: inline;
-                padding: 0 8px;
+footer nav ul li {
+    list-style-type: '';
+    display: inline;
+    padding: 0 8px;
 
-                a:has(svg),
-                a:has(svg):hover {
-                    text-decoration: none;
-                }
+}
 
-                svg {
-                    fill: var(--primary-color-1);
-                }
+footer nav ul li a:has(svg),
+footer nav ul li a:has(svg):hover {
+    text-decoration: none;
+}
 
-                a:hover svg {
-                    fill: var(--primary-color-2);
-                }
-            }
-        }
-    }
+footer nav ul li a svg {
+    fill: var(--primary-color-1);
+}
 
-    .site-info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        column-gap: 36px;
-    }
+footer nav ul li a:hover svg {
+    fill: var(--primary-color-2);
+}
+
+footer .site-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 36px;
 }
 
 /* HOME */
 section.homepage-image {
     width: 100%;
+}
+
+@media (max-width: 767px) {
+    footer nav {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    footer .site-info {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+
+@media (max-width: 450px) {
+    header span.title a {
+        font-size: 1.5rem;
+    }
+
+    footer nav {
+        flex-direction: column;
+        row-gap: 24px;
+    }
+
+    footer .site-info {
+        flex-direction: column;
+        row-gap: 16px;
+    }
+}
+
+@media (max-width: 374px) {
+    header span.title a {
+        font-size: 1.4rem;
+    }
 }
