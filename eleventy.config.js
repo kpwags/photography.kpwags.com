@@ -1,32 +1,35 @@
-const pluginWebc = require('@11ty/eleventy-plugin-webc');
+import pluginWebc from '@11ty/eleventy-plugin-webc';
 
-const readableDateFilter = require('./src/filters/readable-date.js')
+import readableDateFilter from './src/filters/readable-date.js';
+import { photoButton } from './src/shortcodes/photoButton.js';
 
-module.exports = function (eleventyConfig) {
-    eleventyConfig.setServerOptions({
-        port: 8888,
-    });
+export default function (eleventyConfig) {
+	eleventyConfig.setServerOptions({
+		port: 8888,
+	});
 
-    eleventyConfig.addPassthroughCopy({
-        './public/': '/',
-    });
+	eleventyConfig.addPassthroughCopy({
+		'./public/': '/',
+	});
 
-    eleventyConfig.addPlugin(pluginWebc, {
-        components: "./src/_components/**/*.webc",
-    });
+	eleventyConfig.addPlugin(pluginWebc, {
+		components: "./src/_components/**/*.webc",
+	});
 
-    eleventyConfig.addFilter('readableDate', readableDateFilter);
+	eleventyConfig.addFilter('readableDate', readableDateFilter);
 
-    return {
-        templateFormats: [
-            "md",
-            "njk",
-            "html",
-            "liquid",
-        ],
-        dir: {
-            input: 'src',
-            output: '_site'
-        }
-    };
+	eleventyConfig.addShortcode('photoButton', photoButton)
+
+	return {
+		templateFormats: [
+			"md",
+			"njk",
+			"html",
+			"liquid",
+		],
+		dir: {
+			input: 'src',
+			output: '_site'
+		}
+	};
 };

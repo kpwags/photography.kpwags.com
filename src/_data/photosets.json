@@ -1,0 +1,110 @@
+[
+	{
+		"title": "Vermont",
+		"displayDate": "Fall 2016",
+		"dates": "October 6 - 12, 2016",
+		"photos": 44,
+		"cover": "2016-vermont.jpg",
+		"coverAltText": "A creek with a house in the background and colorful leafs",
+		"link": "/photoset/vermont-2016"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Spring 2014",
+		"dates": "April 24 - 27, 2014",
+		"photos": 21,
+		"cover": "2014-nyc.jpg",
+		"coverAltText": "The Brooklyn Bridge against a blue sky",
+		"link": "/photosets/new-york-city-2014"
+	},
+	{
+		"title": "Aruba",
+		"displayDate": "Fall 2014",
+		"dates": "October 21 - 28, 2013",
+		"photos": 15,
+		"cover": "2013-aruba.jpg",
+		"coverAltText": "The ocean with a sailboat off in the background",
+		"link": "/photosets/aruba-2013"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Spring 2013",
+		"dates": "April 13 - 14, 2013",
+		"photos": 16,
+		"cover": "2013-nyc-april.jpg",
+		"coverAltText": "A green field with the New York City skyline in the background",
+		"link": "/photosets/new-york-city-april-2013"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Winter 2013",
+		"dates": "January 26, 2013",
+		"photos": 6,
+		"cover": "2013-nyc-january.jpg",
+		"coverAltText": "Park benches in Central Park covered with snow",
+		"link": "/photosets/new-york-city-january-2013"
+	},
+	{
+		"title": "Rickett's Glen",
+		"displayDate": "Fall 2012",
+		"dates": "October 18, 2012",
+		"photos": 18,
+		"cover": "2012-ricketts-glen.jpg",
+		"coverAltText": "A multi-level waterfall",
+		"link": "/photosets/ricketts-glen-2012"
+	},
+	{
+		"title": "Washington D.C.",
+		"displayDate": "Fall 2012",
+		"dates": "September 28 - 30, 2012",
+		"photos": 12,
+		"cover": "2012-washington-dc.jpg",
+		"coverAltText": "The Lincoln Memorial at the end of the reflecting pool",
+		"link": "/photosets/washington-dc-2012"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Summer 2012",
+		"dates": "August 10 - 11, 2012",
+		"photos": 9,
+		"cover": "2012-nyc-august.jpg",
+		"coverAltText": "The Empire State Building lit up in green and red at night",
+		"link": "/photosets/new-york-city-august-2012"
+	},
+	{
+		"title": "Philadelphia",
+		"displayDate": "Summer 2012",
+		"dates": "June 16, 2012",
+		"photos": 10,
+		"cover": "2012-philadelphia.jpg",
+		"coverAltText": "Independence Hall through leafs",
+		"link": "/photosets/philadelphia-2012"
+	},
+	{
+		"title": "Cape May",
+		"displayDate": "Spring 2012",
+		"dates": "April 16 - 17, 2012",
+		"photos": 20,
+		"cover": "2012-cape-may.jpg",
+		"coverAltText": "Cape May city hall behind a flowering tree",
+		"link": "/photosets/cape-may-2012"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Winter 2012",
+		"dates": "February 24 - 25, 2012",
+		"photos": 22,
+		"cover": "2012-nyc-february.jpg",
+		"coverAltText": "The Chrysler building as part of the New York City skyline",
+		"link": "/photosets/new-york-city-february-2012"
+	},
+	{
+		"title": "New York City",
+		"displayDate": "Winter 2012",
+		"dates": "January 13 - 15, 2012",
+		"photos": 17,
+		"cover": "2012-nyc-january.jpg",
+		"coverAltText": "The New York City skyline from across the East River in Queens",
+		"link": "/photosets/new-york-city-january-2012"
+	}
+]
