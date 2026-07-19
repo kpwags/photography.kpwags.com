@@ -3,11 +3,23 @@ layout: "layouts/layout.html"
 title: Photography
 ---
 
-<section class="homepage-image">
-    <img
-        src="/images/home.jpg"
-        alt="A creek with a house in the background and colorful leafs"
-        width="1920"
-        height="1193"
-    />
+<section class="photoset-list">
+	<ul>
+		{% for photoset in photosets %}
+			<li>
+				<a href="{{ photoset.link }}" class="photoset-link">
+					<img
+						src="/images/photoset-links/{{ photoset.cover }}"
+						alt="{{ photoset.coverAltText }}"
+						width="1920"
+						height="1193"
+					/>
+					<div class="overlay">
+						<h2>{{ photoset.title }}</h2>
+						<div class=""meta">{{ photoset.displayDate }} &bull; {{ photoset.photos }} Photos</div>
+					</div>
+				</a>
+			</li>
+		{% endfor %}
+	</ul>
 </section>
