@@ -572,9 +572,18 @@ section.photos .row:last-of-type img {
 	border-bottom-right-radius: 10px;
 }
 
-section.photos p.photo-note {
+section.photos p.photo-note,
+section.photos div.photo-note {
 	width: calc(var(--width) - 32px);
 	margin: 16px auto;
+}
+
+section.photos div.photo-note p:first-of-type {
+	margin-top: 0;
+}
+
+section.photos div.photo-note p:last-of-type {
+	margin-bottom: 0;
 }
 
 .back-section {
