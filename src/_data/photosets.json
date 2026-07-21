@@ -12,10 +12,10 @@
 		"title": "New York City",
 		"displayDate": "Spring 2014",
 		"dates": "April 24 - 27, 2014",
-		"photos": 21,
+		"photos": 22,
 		"cover": "2014-nyc.jpg",
 		"coverAltText": "The Brooklyn Bridge against a blue sky",
-		"link": "/photosets/new-york-city-2014"
+		"link": "/photoset/new-york-city-2014"
 	},
 	{
 		"title": "Aruba",
@@ -24,7 +24,7 @@
 		"photos": 15,
 		"cover": "2013-aruba.jpg",
 		"coverAltText": "The ocean with a sailboat off in the background",
-		"link": "/photosets/aruba-2013"
+		"link": "/photoset/aruba-2013"
 	},
 	{
 		"title": "New York City",
@@ -33,7 +33,7 @@
 		"photos": 16,
 		"cover": "2013-nyc-april.jpg",
 		"coverAltText": "A green field with the New York City skyline in the background",
-		"link": "/photosets/new-york-city-april-2013"
+		"link": "/photoset/new-york-city-april-2013"
 	},
 	{
 		"title": "New York City",
@@ -42,7 +42,7 @@
 		"photos": 6,
 		"cover": "2013-nyc-january.jpg",
 		"coverAltText": "Park benches in Central Park covered with snow",
-		"link": "/photosets/new-york-city-january-2013"
+		"link": "/photoset/new-york-city-january-2013"
 	},
 	{
 		"title": "Rickett's Glen",
@@ -51,7 +51,7 @@
 		"photos": 18,
 		"cover": "2012-ricketts-glen.jpg",
 		"coverAltText": "A multi-level waterfall",
-		"link": "/photosets/ricketts-glen-2012"
+		"link": "/photoset/ricketts-glen-2012"
 	},
 	{
 		"title": "Washington D.C.",
@@ -60,7 +60,7 @@
 		"photos": 12,
 		"cover": "2012-washington-dc.jpg",
 		"coverAltText": "The Lincoln Memorial at the end of the reflecting pool",
-		"link": "/photosets/washington-dc-2012"
+		"link": "/photoset/washington-dc-2012"
 	},
 	{
 		"title": "New York City",
@@ -69,7 +69,7 @@
 		"photos": 9,
 		"cover": "2012-nyc-august.jpg",
 		"coverAltText": "The Empire State Building lit up in green and red at night",
-		"link": "/photosets/new-york-city-august-2012"
+		"link": "/photoset/new-york-city-august-2012"
 	},
 	{
 		"title": "Philadelphia",
@@ -78,7 +78,7 @@
 		"photos": 10,
 		"cover": "2012-philadelphia.jpg",
 		"coverAltText": "Independence Hall through leafs",
-		"link": "/photosets/philadelphia-2012"
+		"link": "/photoset/philadelphia-2012"
 	},
 	{
 		"title": "Cape May",
@@ -87,16 +87,16 @@
 		"photos": 20,
 		"cover": "2012-cape-may.jpg",
 		"coverAltText": "Cape May city hall behind a flowering tree",
-		"link": "/photosets/cape-may-2012"
+		"link": "/photoset/cape-may-2012"
 	},
 	{
 		"title": "New York City",
 		"displayDate": "Winter 2012",
 		"dates": "February 24 - 25, 2012",
-		"photos": 22,
+		"photos": 20,
 		"cover": "2012-nyc-february.jpg",
 		"coverAltText": "The Chrysler building as part of the New York City skyline",
-		"link": "/photosets/new-york-city-february-2012"
+		"link": "/photoset/new-york-city-february-2012"
 	},
 	{
 		"title": "New York City",
@@ -105,6 +105,6 @@
 		"photos": 17,
 		"cover": "2012-nyc-january.jpg",
 		"coverAltText": "The New York City skyline from across the East River in Queens",
-		"link": "/photosets/new-york-city-january-2012"
+		"link": "/photoset/new-york-city-january-2012"
 	}
 ]
