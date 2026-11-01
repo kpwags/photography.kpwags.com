@@ -1,5 +1,5 @@
 <meta charset="utf-8" />
-<meta name="theme-color" content="#007bdc" />
+<meta name="theme-color" content="#6d28d9" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <meta name="generator" content="{{ eleventy.generator }}">
 
@@ -23,77 +23,37 @@
 		return false;
 	}
 
-	function getPrimaryColor(theme) {
-		switch (theme) {
-			case 'dark':
-				return 'oklch(0.6811 0.168 261.68)';
-			case 'sepia':
-				return 'oklch(0.2567 0.0197 73.06)';
-			case 'red':
-				return 'oklch(51.18% 0.222 26.47)';
-			case 'orange':
-				return 'oklch(0.7162 0.1455 57.71)';
-			case 'yellow':
-				return 'oklch(0.8809 0.1677 104.29)';
-			case 'green':
-				return 'oklch(0.5779 0.1554 150.88)';
-			case 'blue':
-				return 'oklch(0.4779 0.2023 263.12)';
-			case 'purple':
-				return 'oklch(0.5515 0.1727 319.24)';
-			case 'light':
-			default:
-				return 'oklch(0.4102 0.238 264.68)';
-		}
-	}
-
 	function setTheme() {
 		let isSystem = false;
 		let theme = window.localStorage.getItem('data-theme');
 
 		if (!theme) {
-			isSystem = true;
 			theme = isDarkMode() ? 'dark' : 'light';
 		}
 
-		document.querySelector('meta[name="theme-color"]')?.setAttribute('content', getPrimaryColor(theme));
 		document.documentElement.setAttribute('data-theme', theme);
-		document.themeControls.colorTheme.value = isSystem ? 'system' : theme;
+		document.getElementById('toggle-theme-button').setAttribute('data-current-mode', theme);
 	}
 
-	function resetTheme() {
-		window.localStorage.removeItem('data-theme');
+	function toggleTheme() {
+		const currentTheme = document.documentElement.getAttribute('data-theme');
+		let newTheme = 'light';
 
-		const theme = isDarkMode() ? 'dark' : 'light';
-
-		document.querySelector('meta[name="theme-color"]')?.setAttribute('content', getPrimaryColor(theme));
-		document.documentElement.setAttribute('data-theme', theme);
-		document.themeControls.colorTheme.value = 'system';
-	}
-
-	function changeTheme(theme) {
-		if (theme === 'system') {
-			resetTheme();
-			return;
+		if (currentTheme === "light") {
+			newTheme = 'dark';
 		}
-
-		window.localStorage.setItem('data-theme', theme);
-
-		document.querySelector('meta[name="theme-color"]')?.setAttribute('content', getPrimaryColor(theme));
-		document.documentElement.setAttribute('data-theme', theme);
-		document.themeControls.colorTheme.value = theme;
+		
+		window.localStorage.setItem('data-theme', newTheme);
+		document.documentElement.setAttribute('data-theme', newTheme);
+		document.getElementById('toggle-theme-button').setAttribute('data-current-mode', newTheme);
 	}
 
-	// addEventListener('DOMContentLoaded', (event) => {
-	// 	setTheme();
+	addEventListener('DOMContentLoaded', (event) => {
+		setTheme();
 
-	// 	const colorOptions = document.querySelectorAll('input[name="colorTheme"]');
-
-	// 	colorOptions.forEach((opt) => {
-	// 		opt.addEventListener('change', (e) => {
-	// 			changeTheme(e.target.value);
-	// 		});
-	// 	});
-	// });
+		document.getElementById('toggle-theme-button').addEventListener('click', function () {
+			toggleTheme();
+		});
+	});
 </script>
 <script src="/scripts/photoset.js"></script>

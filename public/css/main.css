@@ -6,10 +6,16 @@ html,
 body {
 	background: var(--background);
 	font-size: var(--font-size-base);
+	color: var(--text);
 	line-height: 1.5;
 	font-family: var(--font);
 	padding: 0;
 	margin: 0;
+	
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
 }
 
 /* CATCH WHEN I MISS A LABEL OR ALT TEXT */
@@ -24,43 +30,44 @@ svg[aria-hidden="true"] {
 
 main {
 	width: var(--width);
-	margin: 32px auto;
+	margin: 32px auto 64px auto;
 	max-width: 100%;
 }
 
 h1 {
 	font-weight: 500;
-	font-size: 4rem;
-	color: var(--primary-color);
+	font-size: 2.25rem;
+	color: var(--color-1);
 	margin: 0 0 32px 0;
 	padding: 0;
+	text-align: center;
 }
 
 h2 {
 	font-weight: 500;
-	font-size: 2.5rem;
-	color: var(--secondary-color);
+	font-size: 2rem;
+	color: var(--color-2);
 	margin: 24px 0;
 	padding: 0;
 }
 
 h3 {
-	font-size: 1.8rem;
-	color: var(--tertiary-color);
+	font-size: 1.75rem;
+	color: var(--color-3);
 	font-weight: 400;
 	margin: 20px 0;
 	padding: 0;
 }
 
 h4 {
-	font-size: 1.6rem;
+	font-size: 1.5rem;
 	font-weight: 400;
-	color: var(--primary-color);
+	color: var(--color-1);
 	margin: 12px 0;
 }
 
 h5 {
-	font-size: 1.5rem;
+	font-size: 1.35rem;
 	font-weight: 400;
 	margin: 12px 0;
 }
@@ -98,6 +105,24 @@ h6 {
 	}
 }
 
+h1:has(+ p.page-description) {
+	margin-bottom: 4px;
+}
+
+h1 + p.page-description {
+	margin-block-start: 0;
+	text-align: center;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+@media (max-width: 600px) {
+	h1 + p.page-description {
+		width: 90%;
+	}
+}
+
 p {
 	line-height: 32px;
 	margin-block-start: 24px;
@@ -125,13 +150,15 @@ ul > p:empty {
 
 a,
 a:visited {
-	color: var(--primary-color);
+	color: var(--text);
 	cursor: pointer;
+	text-decoration-color: var(--color-1);
 	text-underline-offset: 3px;
 }
 
 a:hover {
-	color: var(--seconday-color);
+	text-decoration-color: var(--color-2);
+	color: var(--color-1);
 }
 
 a img {
@@ -144,6 +171,18 @@ button {
 
 .hidden {
 	display: none;
+}
+
+.align-left {
+	text-align: left;
+}
+
+.align-center {
+	text-align: center;
+}
+
+.align-right {
+	text-align: right;
 }
 
 .rainbow-bar {
@@ -176,16 +215,15 @@ button {
 }
 
 header {
-	background-color: var(--primary-color);
+	background-color: var(--color-1);
 	position: relative;
-	height: 64px;
 	margin-bottom: 72px;
 }
 
 header img {
 	position: absolute;
 	top: 8px;
-	border: 4px solid var(--primary-color);
+	border: 4px solid var(--color-1);
 	border-radius: 50%;
 }
 
@@ -196,12 +234,10 @@ header .content {
 	gap: 32px;
 	align-items: center;
 	justify-content: space-between;
-	height: 64px;
 }
 
 header .content .title {
 	font-size: 1.5rem;
-	font-weight: 700;
 }
 
 header .content .title a {
@@ -213,11 +249,16 @@ header .content .title a {
 
 header .content .title a:hover {
 	text-decoration: underline;
+	text-decoration-color: var(--color-2);
+}
+
+header nav {
+	height: 100%;
 }
 
 header nav ul {
 	margin: 0;
-	padding: 8px 16px;
+	padding: 0 16px;
 	display: inline-flex;
 	gap: 32px;
 }
@@ -226,15 +267,20 @@ header nav ul li {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
+	display: flex;
 }
 
 header .content nav ul li a {
 	text-decoration: none;
 	color: var(--white);
+	padding: 16px 0 10px;
+	border-bottom: 6px solid var(--color-1);
+	font-size: 1rem;
 }
 
 header .content nav ul li a:hover {
-	text-decoration: underline;
+	text-decoration: none;
+	border-color: var(--color-3);
 }
 
 @media (max-width: 900px) {
@@ -263,9 +309,9 @@ header .content nav ul li a:hover {
 }
 
 footer {
-	background-color: var(--primary-color);
+	background-color: var(--color-1);
 	padding: 32px 0;
-	margin-top: 48px;
+	margin-top: auto;
 }
 
 footer .content {
@@ -302,15 +348,9 @@ footer .content nav ul li a {
 	color: var(--white);
 }
 
-footer div.site-info {
-	justify-content: center;
-	display: flex;
-	gap: 32px;
-	color: var(--white);
-}
-
-footer div.site-info a {
-	color: var(--white);
+footer div.content nav ul li a:hover {
+	text-decoration: underline;
+	text-decoration-color: var(--color-2);
 }
 
 footer .content ul.social-links li a {
@@ -323,92 +363,70 @@ footer svg {
 	fill: var(--white);
 }
 
-footer .theme-selector .theme-controls fieldset {
+footer a:hover svg {
+	fill: var(--color-2);
+}
+
+footer .site-info {
+	font-size: 0.8rem;
+	color: var(--white);
+	text-align: center;
+	margin-top: 16px;
+}
+
+.light-dark-toggle {
 	display: flex;
-	gap: 16px;
-	align-items: center;
 	justify-content: center;
-	border: none;
-	padding: 0;
-	margin: 0;
-	width: 100%;
-	flex-wrap: wrap;
-}
-
-footer .theme-selector .theme-controls legend {
-	font-weight: 600;
-	display: contents;
-}
-
-footer .theme-selector label {
-	cursor: pointer;
-}
-
-footer .theme-selector .theme-controls input {
-	display: none;
-}
-
-footer .theme-option {
-	border: 1px solid var(--border-color);
-	border-radius: 6px;
-	width: 32px;
-	height: 32px;
-	box-sizing: content-box;
-}
-
-footer .theme-controls label:has(input:checked) .theme-option {
-	border: 4px solid var(--black);
-}
-
-footer .theme-controls label[for="theme-dark"]:has(input:checked) .theme-option {
-	border: 4px solid var(--white);
+	margin-top: 16px;
 }
 
 @media (max-width: 600px) {
-	footer .theme-selector .theme-controls legend {
-		display: unset;
-		margin-bottom: 8px;
+	.light-dark-toggle {
+		justify-content: center;
 	}
 }
 
-footer label[for="theme-system"] .theme-option {
-	background: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%, rgba(255, 255, 255, 1) 100%);
+.light-dark-toggle button {
+	border-radius: 50px;
+	border: 2px solid var(--white);
+	background-color: transparent;
+	padding: 8px 16px;
+ 	line-height: 12px;
+ 	font-size: 0.8rem;
+ 	color: var(--white);
 }
 
-footer label[for="theme-light"] .theme-option {
-	background-color: var(--white);
+.light-dark-toggle button:hover {
+	border-color: var(--color-3);
+	background-color: var(--primary-50);
+	color: var(--color-1);
 }
 
-footer label[for="theme-dark"] .theme-option {
-	background-color: oklch(38.29% 0 271.15);
+.light-dark-toggle button svg {
+	width: 16px;
+	height: 16px;
+	fill: var(--color-5);
 }
 
-footer label[for="theme-sepia"] .theme-option {
-	background-color: oklch(0.8613 0.0197 73.06);
+.light-dark-toggle button:hover svg {
+	fill: var(--color-1);
 }
 
-footer label[for="theme-red"] .theme-option {
-	background-color: var(--red);
+.light-dark-toggle button span.switch {
+	display: flex;
+	gap: 16px;
+	align-items: center;
 }
 
-footer label[for="theme-orange"] .theme-option {
-	background-color: var(--orange);
+.light-dark-toggle button[data-current-mode="light"] span.switch-light-mode,
+.light-dark-toggle button[data-current-mode="dark"] span.switch-dark-mode {
+	display: none;
 }
 
-footer label[for="theme-yellow"] .theme-option {
-	background-color: var(--yellow);
-}
 
-footer label[for="theme-green"] .theme-option {
-	background-color: var(--green);
-}
-
-footer label[for="theme-blue"] .theme-option {
-	background-color: var(--blue);
-}
-
-footer label[for="theme-purple"] .theme-option {
-	background-color: var(--purple);
+.light-dark-toggle button[data-current-mode="light"] span.switch-dark-mode,
+.light-dark-toggle button[data-current-mode="dark"] span.switch-light-mode {
+	display: flex;
 }
 
 section.photoset-list ul {
@@ -458,6 +476,11 @@ section.photoset-list ul li a .overlay h2 {
 	font-size: 3rem;
 	margin: 0 0 8px 0;
   	font-weight: 700;
+	color: var(--white);
+}
+
+section.photoset-list ul li a:hover h2 {
+	color: var(--primary-100);
 }
 
 @media (max-width: 500px) {
@@ -471,7 +494,7 @@ section.homepage-image {
 }
 
 section.photoset-header {
-	background: var(--primary-color);
+	background: var(--color-1);
 	color: var(--white);
 	border-radius: 10px;
 }
@@ -608,7 +631,7 @@ section.photos div.photo-note p:last-of-type {
 	height: 60px;
 	width: 60px;
 	border-bottom-left-radius: 24px;
-	background: var(--primary-color);
+	background: var(--primary-50);
 }
 
 .photo-modal button.close-photo-modal {
@@ -621,11 +644,11 @@ section.photos div.photo-note p:last-of-type {
 	background: transparent;
 	padding: 0;
 	z-index: calc(var(--z-index-dialog) + 10);
-	fill: var(--white);
+	fill: var(--primary-500);
 }
 
 .photo-modal button.close-photo-modal:hover svg {
-	fill: var(--primary-color-faded);
+	fill: var(--primary-300);
 }
 
 .photo-modal button.close-photo-modal svg {
